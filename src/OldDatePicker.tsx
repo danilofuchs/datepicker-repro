@@ -22,7 +22,10 @@ export const OldDatePicker = () => {
       onCalendarClose={() => {
         setOpen(false);
       }}
-      onFocus={() => setOpen(true)}
+      onFocus={() => {
+        console.log("FOCUS [7.5.0]");
+        setOpen(true);
+      }}
     />
   );
 };
