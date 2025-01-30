@@ -1,4 +1,4 @@
-import "react-datepicker-new/dist/react-datepicker.css";
+import "react-datepicker-old/dist/react-datepicker.css";
 import ReactDatePickerOld from "react-datepicker-old";
 import { useState } from "react";
 
