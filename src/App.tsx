@@ -1,13 +1,18 @@
 import "./App.css";
-import ReactDatePickerNew from "react-datepicker-new";
-import ReactDatePickerOld from "react-datepicker-old";
-import "react-datepicker/dist/react-datepicker.css";
+import { NewDatePicker } from "./NewDatePicker";
+import { OldDatePicker } from "./OldDatePicker";
 
 function App() {
   return (
     <div className="App">
-      <ReactDatePickerNew preventOpenOnFocus withPortal />
-      <ReactDatePickerOld preventOpenOnFocus withPortal />
+      <div>
+        7.5.0
+        <OldDatePicker />
+      </div>
+      <div>
+        7.6.0
+        <NewDatePicker />
+      </div>
     </div>
   );
 }
