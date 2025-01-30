@@ -3,23 +3,19 @@ import ReactDatePickerOld from "react-datepicker-old";
 import { useState } from "react";
 
 export const OldDatePicker = () => {
-  const [value, setValue] = useState<Date | null>(null);
-
   const [open, setOpen] = useState(false);
 
   return (
     <ReactDatePickerOld
-      selected={value}
-      onChange={(date) => setValue(date)}
       open={open}
-      preventOpenOnFocus
-      shouldCloseOnSelect
-      portalId="date-picker-portal"
-      adjustDateOnChange
+      preventOpenOnFocus // We control the state
+      shouldCloseOnSelect // We control the state
       onCalendarOpen={() => {
+        console.log("OPEN [7.5.0]");
         setOpen(true);
       }}
       onCalendarClose={() => {
+        console.log("CLOSE [7.5.0]");
         setOpen(false);
       }}
       onFocus={() => {
